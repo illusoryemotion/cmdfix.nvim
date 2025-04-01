@@ -48,4 +48,4 @@ This plugin leverages the `CmdlineLeave` autocommand for its functionality. Acco
 
 ### Notes
 
-- The native `:cabbrev` command can be used for defining abbreviations in command line mode. However, they are rather impratical as the expansion can be triggered anywhere in the command line.
+- The native `:cabbrev` command can be used for defining abbreviations in command line mode. However, they are rather impractical as the expansion can be triggered anywhere in the command line.
