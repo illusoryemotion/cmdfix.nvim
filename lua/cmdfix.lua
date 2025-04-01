@@ -107,7 +107,7 @@ end
 
 -- Setup config
 -- Before falling back to the default value, look for options
--- definied with vimscript (eg via let g:cmdfix_enabled = v:true)
+-- defined with vimscript (eg via let g:cmdfix_enabled = v:true)
 local function setup_config(config)
 	for k, v in pairs(M.config_defaults) do
 		if config[k] ~= nil then

@@ -17,6 +17,23 @@ require("cmdfix").setup({
 })
 ```
 
+#### Lazy.nvim
+
+```lua
+  {
+    'gcmt/cmdfix.nvim',
+    lazy = true,
+    event = 'CmdlineEnter',
+    opts = {
+      enabled = true,  -- enable or disable plugin
+      threshold = 2, -- minimum characters to consider before fixing the command
+      ignore = { "Next" },  -- won't be fixed (default value)
+      aliases = { VeryLongCommand = "vlc" },  -- custom aliases
+    }
+  },
+```
+
+
 ### Commands shadowing
 
 If you have for example a user-defined command `:Marks`, the vim-native command `:marks` will effectively never be executed. If you want to retain the ability to execute both commands independently, just add the `Marks` command to the ignore list.
