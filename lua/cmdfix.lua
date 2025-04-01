@@ -123,6 +123,7 @@ end
 M.setup = function(config)
 	setup_config(config or {})
 	setup_autocommands()
+	M.discover_commands()
 end
 
 return M
