@@ -53,7 +53,12 @@ local function fix_cmdline()
 	local threshold = M.config.threshold
 	local cmd = string.sub(raw, startpos, endpos)
 	local repl = M.commands[string.lower(cmd)]
-	if string.match(cmd, "%u") and M.config.capitalize_only and not repl and not M.ignored[cmd] then
+	if
+		string.match(cmd, "%u")
+		and not M.config.capitalize_only
+		and not repl
+		and not M.ignored[cmd]
+	then
 		-- User id typing explicitly an uppercase command. If it is not
 		-- a tracked user-defined command and it is not an ignored command,
 		-- make it lowercase as it could be a typing mistake
